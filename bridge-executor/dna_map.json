@@ -1,0 +1,12 @@
+{
+  "project": "Fim-do-2FA-Externo-DNA-First",
+  "architect": "José Patrick Castro Soares",
+  "layers": {
+    "core": "bridge-core/ (C++)",
+    "security": "bridge-security/ (Rust)",
+    "executor": "bridge-executor/ (Python)",
+    "interface": "bridge-web/ (JS/HTML)",
+    "sovereign": "invisible-state/ (Data)"
+  },
+  "status": "Stabilizing_2026"
+}
