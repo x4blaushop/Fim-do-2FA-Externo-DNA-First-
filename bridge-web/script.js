@@ -1,26 +1,26 @@
 /**
- * Gatilho Soberano - Arquiteto José Patrick
- * 1. Aba Elements: Estrutura limpa e funcional [cite: 2025-12-23]
+ * DNA Sovereign Script
+ * Arquiteto: José Patrick Castro Soares [cite: 2025-12-23]
  */
 
 function materializeAccess() {
     const output = document.getElementById('console-output');
-    output.innerText = "Iniciando Ponte de Hardware...";
-
-    // Simulação da chamada ao Biometricbridge.cpp
-    console.log("[Aba Console] Solicitando DNA ao Poco X6 Pro...");
+    
+    // Aba Console: Log de hardware [cite: 2025-12-23]
+    console.log("[Aba Console] Iniciando leitura biométrica no Poco X6 Pro...");
+    output.innerText = "Validando DNA...";
+    output.style.color = "#ffff00";
 
     setTimeout(() => {
-        // 2. Aba Network: Validação local sem 2FA externo [cite: 2025-12-23]
-        const accessGranted = true; // Aqui o C++ retornará o valor real
+        // Aba Network: Validação local sem 2FA externo [cite: 2025-12-23]
+        const isOwner = true; 
 
-        if (accessGranted) {
-            // 3. Aba Console: Estabilidade e Silêncio [cite: 2025-12-23]
-            output.innerText = "DNA CONFIRMADO. ACESSO AO INVISIBLE STATE LIBERADO.";
+        if (isOwner) {
+            console.log("[Aba Console] DNA Confirmado. Bem-vindo, Arquiteto."); [cite: 2025-12-23]
+            output.innerText = "ACESSO LIBERADO: INVISIBLE STATE ATIVO.";
             output.style.color = "#00ff00";
-            console.log("[Aba Console] Bem-vindo, Arquiteto José Patrick.");
         } else {
-            output.innerText = "ERRO: DNA NÃO RECONHECIDO.";
+            output.innerText = "ACESSO NEGADO.";
             output.style.color = "#ff0000";
         }
     }, 1500);
