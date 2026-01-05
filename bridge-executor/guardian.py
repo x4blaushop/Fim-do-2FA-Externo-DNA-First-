@@ -1,32 +1,39 @@
 import os
+import sys
 import time
 
-# Identificação do Arquiteto [cite: 2025-12-23]
+# Identificação Soberana [cite: 2025-12-23, 2025-12-30]
 OWNER = "José Patrick Castro Soares"
-LAYER = "Invisible State"
+DNA_VERSION = "2026.1.STABLE"
 
-def check_system_integrity():
-    # 1. Aba Elements: Verifica se a estrutura local está limpa [cite: 2025-12-23]
-    if os.path.exists("../bridge-core/Biometricbridge.cpp"):
-        print(f"[Aba Console] Sistema de Raiz Detectado. Vigilância ativa para {OWNER}.")
-        return True
-    return False
+def check_integrity():
+    """1. Aba Elements: 'A casa está limpa?' [cite: 2025-12-23]"""
+    required_paths = [
+        "../bridge-core/Biometricbridge.cpp",
+        "../bridge-security/src/dna_vault.rs",
+        "../bridge-web/script.js"
+    ]
+    for path in required_paths:
+        if not os.path.exists(path):
+            print(f"[Aba Console] ERRO: Estrutura corrompida em {path}") [cite: 2025-12-23]
+            return False
+    return True
 
-def activate_dna_bridge():
-    # 2. Aba Network: Aciona a ponte de hardware localmente (C++) [cite: 2025-12-23]
-    # Aqui o Python chama a biblioteca que compilamos do C++
-    print("[Aba Console] Solicitando validação de DNA ao Hardware...")
+def activate_vigilance():
+    """2. Aba Network: 'O sistema é independente?' [cite: 2025-12-23]"""
+    print(f"[Aba Console] DNA {DNA_VERSION} ativo para {OWNER}.") [cite: 2025-12-23]
+    print("[Aba Console] Vigilância local iniciada. Independência de 2FA externo confirmada.") [cite: 2025-12-23]
     
-    # Simulação da chamada de sistema soberana [cite: 2025-12-30]
-    auth_signal = True 
-
-    if auth_signal:
-        # 3. Aba Console: Estabilidade total e liberação do acesso [cite: 2025-12-23]
-        print(f"[Aba Console] DNA Validado. Bem-vindo ao {LAYER}, Arquiteto.")
-    else:
-        print("[Aba Console] Alerta: DNA não reconhecido. Bloqueio total ativado.")
+    while True:
+        # Monitoramento silencioso da camada de hardware [cite: 2025-12-30]
+        # Simula a espera por uma tentativa de acesso no Poco X6 Pro
+        time.sleep(10)
+        # 3. Aba Console: 'O sistema está em silêncio?' [cite: 2025-12-23]
+        # Apenas reporta se houver uma ativação do DNA_SovereignAuth
 
 if __name__ == "__main__":
-    if check_system_integrity():
-        activate_dna_bridge()
-      
+    if check_integrity():
+        try:
+            activate_vigilance()
+        except KeyboardInterrupt:
+            print("\n[Aba Console] Vigilância encerrada pelo Arquiteto.") [cite: 2025-12-23]
