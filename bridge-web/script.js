@@ -1,26 +1,27 @@
-// Função para materializar o sensor do Poco X6 Pro
-async function ativarChaveDoArquiteto() {
-  const options = {
-    publicKey: {
-      challenge: new Uint8Array([1, 2, 3, 4]), // Desafio aleatório de DNA
-      rp: { name: "Sistema Soberano" },
-      user: {
-        id: new Uint8Array([10, 20, 30]),
-        name: "José Patrick",
-        displayName: "Arquiteto José Patrick"
-      },
-      pubKeyCredParams: [{ alg: -7, type: "public-key" }], // Algoritmo compatível com TEE
-      authenticatorSelection: { authenticatorAttachment: "platform" }, // Usa o hardware local
-      timeout: 60000
-    }
-  };
+/**
+ * Gatilho Soberano - Arquiteto José Patrick
+ * 1. Aba Elements: Estrutura limpa e funcional [cite: 2025-12-23]
+ */
 
-  try {
-    const credential = await navigator.credentials.create(options);
-    console.log("Aba Console: DNA Validado com Sucesso.");
-    abrirEstadoInvisivel(); // Libera a camada soberana [cite: 2025-12-30]
-  } catch (err) {
-    console.error("Aba Console: Falha na identificação do Arquiteto.");
-  }
+function materializeAccess() {
+    const output = document.getElementById('console-output');
+    output.innerText = "Iniciando Ponte de Hardware...";
+
+    // Simulação da chamada ao Biometricbridge.cpp
+    console.log("[Aba Console] Solicitando DNA ao Poco X6 Pro...");
+
+    setTimeout(() => {
+        // 2. Aba Network: Validação local sem 2FA externo [cite: 2025-12-23]
+        const accessGranted = true; // Aqui o C++ retornará o valor real
+
+        if (accessGranted) {
+            // 3. Aba Console: Estabilidade e Silêncio [cite: 2025-12-23]
+            output.innerText = "DNA CONFIRMADO. ACESSO AO INVISIBLE STATE LIBERADO.";
+            output.style.color = "#00ff00";
+            console.log("[Aba Console] Bem-vindo, Arquiteto José Patrick.");
+        } else {
+            output.innerText = "ERRO: DNA NÃO RECONHECIDO.";
+            output.style.color = "#ff0000";
+        }
+    }, 1500);
 }
-
