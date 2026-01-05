@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>DNA Sovereign System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Sovereign - Portal do Arquiteto</title>
     <style>
-        body { background: #000; color: #0f0; font-family: monospace; text-align: center; }
-        #dna-panel { border: 1px solid #0f0; margin: 10% auto; padding: 20px; width: 300px; }
+        body { background: #000; color: #00ff00; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; }
+        #portal { border: 2px solid #00ff00; padding: 40px; text-align: center; box-shadow: 0 0 20px #00ff00; }
+        button { background: transparent; border: 1px solid #00ff00; color: #00ff00; padding: 10px 20px; cursor: pointer; font-size: 1.2em; margin-top: 20px; transition: 0.3s; }
+        button:hover { background: #00ff00; color: #000; }
+        .status { margin-top: 15px; font-size: 0.8em; color: #008800; }
     </style>
 </head>
 <body>
-    <div id="dna-panel">
-        <h1>SISTEMA SOBERANO</h1>
-        <p>Arquiteto: José Patrick</p>
-        <button onclick="requestDNA()">ATIVAR DNA</button>
+    <div id="portal">
+        <h2>SISTEMA DE ACESSO DNA</h2>
+        <p>ARQUITETO: JOSÉ PATRICK</p>
+        <button onclick="materializeAccess()">ATIVAR DNA</button>
+        <div id="console-output" class="status">Aguardando ativação...</div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
